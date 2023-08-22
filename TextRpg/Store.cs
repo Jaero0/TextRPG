@@ -277,7 +277,7 @@ namespace TextRPG
             Console.WriteLine();
             Console.Write(" ");
             Console.BackgroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine($"{storeItemList.Count + 1}. 상점으로 돌아가기");
+            Console.WriteLine($"a. 초기 상점화면으로 돌아가기");
             Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine();
             Console.BackgroundColor = ConsoleColor.Black;
@@ -378,14 +378,14 @@ namespace TextRPG
                 Console.Write(".");
                 MainGame.GameStart();
             }
-            else if (info.KeyChar - '0' == (storeItemList.Count + 1))
+            else if (info.KeyChar == 'a')
             {
                 Console.ReadKey();
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("잠시만 기다려주세요.");
                 Console.WriteLine();
-                Console.Write("메인 상점화면으로 진입합니다.");
+                Console.Write("초기 상점화면으로 진입합니다.");
                 Thread.Sleep(300);
                 Console.Write(".");
                 Thread.Sleep(300);
@@ -483,7 +483,7 @@ namespace TextRPG
             Console.WriteLine();
             Console.Write(" ");
             Console.BackgroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine($"{Inven.equipItemList.Count + 1}. 메인 상점화면으로 돌아가기");
+            Console.WriteLine($"a. 초기 상점화면으로 돌아가기");
             Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine();
             Console.BackgroundColor = ConsoleColor.Black;
@@ -607,14 +607,14 @@ namespace TextRPG
                 Console.Write(".");
                 MainGame.GameStart();
             }
-            else if (info.KeyChar - '0' == (Inven.equipItemList.Count + 1))
+            else if (info.KeyChar  == 'a')
             {
                 Console.ReadKey();
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("잠시만 기다려주세요.");
                 Console.WriteLine();
-                Console.Write("메인 상점화면으로 진입합니다.");
+                Console.Write("초기 상점화면으로 진입합니다.");
                 Thread.Sleep(300);
                 Console.Write(".");
                 Thread.Sleep(300);

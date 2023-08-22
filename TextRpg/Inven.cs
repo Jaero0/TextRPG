@@ -196,7 +196,7 @@ namespace TextRPG
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write(" ");
             Console.BackgroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine($"{equipItemList.Count + 1}. 인벤토리로 돌아가기");
+            Console.WriteLine($"a. 인벤토리로 돌아가기");
             Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine();
             Console.Write(" ");
@@ -240,7 +240,7 @@ namespace TextRPG
 
             }
 
-            else if (info.KeyChar - '0' == equipItemList.Count + 1)
+            else if (info.KeyChar == 'a')
             {
                 Console.ReadKey();
                 Console.WriteLine();
