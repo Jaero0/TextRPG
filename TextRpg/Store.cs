@@ -353,6 +353,15 @@ namespace TextRPG
                             StoreBuy();
                         }
                     }
+                    else if (MainGame.player.currentGold < int.Parse(storeItemList[selectedInfo].buyPrice))
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine();
+                        Console.WriteLine("골드가 부족합니다");
+                        Console.WriteLine();
+                        Console.ReadLine();
+                        StoreBuy();
+                    }
                 }
             }
             else if (info.KeyChar == '0')
