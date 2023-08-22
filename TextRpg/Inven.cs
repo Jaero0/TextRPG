@@ -70,9 +70,9 @@ namespace TextRPG
                     int defKoreanCount = KoreanCount.CountKoreanCharacters(defenseBonusText);
                     int itInfoKoreanCount = KoreanCount.CountKoreanCharacters(equipItemList[i].itInfo);
 
-                    Console.Write($" - {equipItemList[i].equiped}");
+                    Console.Write(" - ");
 
-                    Console.Write(string.Format("{0}", equipItemList[i].itName).PadRight(20  - itNameKoreanCount) + "|");
+                    Console.Write(string.Format("{0}{1}", equipItemList[i].equiped, equipItemList[i].itName).PadRight(25 - itNameKoreanCount - 3) + "|");
 
                     Console.Write(string.Format(" {0}", attackBonusText).PadRight(15 - attKoreanCount) + "|");
 
@@ -177,9 +177,9 @@ namespace TextRPG
                     int defKoreanCount = KoreanCount.CountKoreanCharacters(defenseBonusText);
                     int itInfoKoreanCount = KoreanCount.CountKoreanCharacters(equipItemList[i].itInfo);
 
-                    Console.Write($" - {i+1}. {equipItemList[i].equiped}");
+                    Console.Write($" - {i + 1}. ");
 
-                    Console.Write(string.Format("{0}", equipItemList[i].itName).PadRight(20 - itNameKoreanCount) + "|");
+                    Console.Write(string.Format("{0}{1}", equipItemList[i].equiped, equipItemList[i].itName).PadRight(25 - itNameKoreanCount - 3) + "|");
 
                     Console.Write(string.Format(" {0}", attackBonusText).PadRight(15 - attKoreanCount) + "|");
 

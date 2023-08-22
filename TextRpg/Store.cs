@@ -458,9 +458,9 @@ namespace TextRPG
                     int itInfoKoreanCount = KoreanCount.CountKoreanCharacters(Inven.equipItemList[i].itInfo);
                     int sellPriceKoreanCount = KoreanCount.CountKoreanCharacters(Inven.equipItemList[i].sellPrice);
 
-                    Console.Write($" - {i + 1}. {Inven.equipItemList[i].equiped}");
+                    Console.Write($" - {i + 1}. ");
 
-                    Console.Write(string.Format("{0}", Inven.equipItemList[i].itName).PadRight(20 - itNameKoreanCount) + "|");
+                    Console.Write(string.Format("{0}{1}", Inven.equipItemList[i].equiped, Inven.equipItemList[i].itName).PadRight(25 - itNameKoreanCount - 3) + "|");
 
                     Console.Write(string.Format(" {0}", attackBonusText).PadRight(15 - attKoreanCount) + "|");
 
@@ -470,7 +470,7 @@ namespace TextRPG
 
                     Console.Write(" 판매가 :");
 
-                    Console.Write(string.Format(" {0} G", (int.Parse(Inven.equipItemList[i].sellPrice)/100)*85).PadRight(10 - sellPriceKoreanCount) + "|");
+                    Console.Write(string.Format(" {0} G", (int.Parse(Inven.equipItemList[i].sellPrice) / 100) * 85).PadRight(10 - sellPriceKoreanCount) + "|");
 
                     Console.WriteLine();
                     Console.WriteLine();
@@ -523,7 +523,7 @@ namespace TextRPG
                     Console.ReadKey();
                     if (info2.KeyChar == '1')
                     {
-                        MainGame.player.currentGold += (int.Parse(Inven.equipItemList[selectedInfo].sellPrice)/100)*85;
+                        MainGame.player.currentGold += (int.Parse(Inven.equipItemList[selectedInfo].sellPrice) / 100) * 85;
                         Console.WriteLine();
                         Console.WriteLine();
                         Console.WriteLine($"{Inven.equipItemList[selectedInfo].itName}을/를 판매하였습니다");
