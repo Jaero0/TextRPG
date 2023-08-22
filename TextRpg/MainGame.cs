@@ -5,6 +5,7 @@ using System.Threading;
 using System.Numerics;
 using System.Xml.Linq;
 using TextRPG;
+using Utility;
 using static System.Formats.Asn1.AsnWriter;
 
 namespace TextRPG
