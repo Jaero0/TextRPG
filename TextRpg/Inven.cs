@@ -5,30 +5,29 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using TextRPG;
+using Utility;
 
 namespace TextRPG
 {
 
     class Inven //인벤토리 클래스 
     {
-        public bool IsEquip = false; // 장비가 장착되어있는지 확인하는 변수
-
-        private List<EquipItem> equipItemList; // 장비 아이템 정보가 담긴 배열
+        public static List<EquipItemsInformation> equipItemList; // 장비 아이템 정보가 담긴 배열
 
         public Inven() // EquipItem클래스를 이용해 장비Inven 리스트를 만들 생성자 
         {
-            equipItemList = new List<EquipItem>();
+            equipItemList = new List<EquipItemsInformation>();
         }
 
-        public void ItemIn(EquipItem equipItem) // 장비 Inven리스트에 장비정보를 넣어줄 메서드
+        public void InvenItemIn(EquipItemsInformation equipItem) // 장비 Inven리스트에 장비정보를 넣어줄 메서드
         {
             equipItemList.Add(equipItem);
         }
 
-        public void InvenStatus()
+        public void InvenStatus() //인벤토리 메인화면
         {
             Console.Clear();
-            Console.WriteLine("\r\n      :::::::::::       ::::    :::    :::     :::       ::::::::::       ::::    :::   :::::::::::       ::::::::       :::::::::    :::   ::: \r\n         :+:           :+:+:   :+:    :+:     :+:       :+:              :+:+:   :+:       :+:          :+:    :+:      :+:    :+:   :+:   :+:  \r\n        +:+           :+:+:+  +:+    +:+     +:+       +:+              :+:+:+  +:+       +:+          +:+    +:+      +:+    +:+    +:+ +:+    \r\n       +#+           +#+ +:+ +#+    +#+     +:+       +#++:++#         +#+ +:+ +#+       +#+          +#+    +:+      +#++:++#:      +#++:      \r\n      +#+           +#+  +#+#+#     +#+   +#+        +#+              +#+  +#+#+#       +#+          +#+    +#+      +#+    +#+      +#+        \r\n     #+#           #+#   #+#+#      #+#+#+#         #+#              #+#   #+#+#       #+#          #+#    #+#      #+#    #+#      #+#         \r\n###########       ###    ####        ###           ##########       ###    ####       ###           ########       ###    ###      ###          \r\n");
+            Console.WriteLine("\r\n::::::::::: ::::    ::: :::     ::: :::::::::: ::::    ::: :::::::::::  ::::::::  :::::::::  :::   ::: \r\n    :+:     :+:+:   :+: :+:     :+: :+:        :+:+:   :+:     :+:     :+:    :+: :+:    :+: :+:   :+: \r\n    +:+     :+:+:+  +:+ +:+     +:+ +:+        :+:+:+  +:+     +:+     +:+    +:+ +:+    +:+  +:+ +:+  \r\n    +#+     +#+ +:+ +#+ +#+     +:+ +#++:++#   +#+ +:+ +#+     +#+     +#+    +:+ +#++:++#:    +#++:   \r\n    +#+     +#+  +#+#+#  +#+   +#+  +#+        +#+  +#+#+#     +#+     +#+    +#+ +#+    +#+    +#+    \r\n    #+#     #+#   #+#+#   #+#+#+#   #+#        #+#   #+#+#     #+#     #+#    #+# #+#    #+#    #+#    \r\n########### ###    ####     ###     ########## ###    ####     ###      ########  ###    ###    ###    \r\n");
             Console.WriteLine();
             Console.WriteLine();
 
@@ -66,10 +65,10 @@ namespace TextRPG
                         defenseBonusText = "방어력" + " - " + (-equipItemList[i].itDef);
                     }
 
-                    int itNameKoreanCount = CountKoreanCharacters(equipItemList[i].itName);
-                    int attKoreanCount = CountKoreanCharacters(attackBonusText);
-                    int defKoreanCount = CountKoreanCharacters(defenseBonusText);
-                    int itInfoKoreanCount = CountKoreanCharacters(equipItemList[i].itInfo);
+                    int itNameKoreanCount = KoreanCount.CountKoreanCharacters(equipItemList[i].itName);
+                    int attKoreanCount = KoreanCount.CountKoreanCharacters(attackBonusText);
+                    int defKoreanCount = KoreanCount.CountKoreanCharacters(defenseBonusText);
+                    int itInfoKoreanCount = KoreanCount.CountKoreanCharacters(equipItemList[i].itInfo);
 
                     Console.Write($" - {equipItemList[i].equiped}");
 
@@ -107,7 +106,7 @@ namespace TextRPG
             InvenChoose();
         }
 
-        public void InvenChoose()
+        public void InvenChoose() //인벤토리 메인화면 선택분기
         {
             ConsoleKeyInfo info = Console.ReadKey();
             if (info.KeyChar == '1')
@@ -140,10 +139,10 @@ namespace TextRPG
             }
         }
 
-        public void EquipManage()
+        public void EquipManage() // 장착관리 선택시 장착관리 화면
         {
             Console.Clear();
-            Console.WriteLine("\r\n      :::::::::::   :::::::::::       ::::::::::         :::   :::                       :::   :::           :::        ::::    :::           :::        ::::::::       :::::::::: \r\n         :+:           :+:           :+:               :+:+: :+:+:                     :+:+: :+:+:        :+: :+:      :+:+:   :+:         :+: :+:     :+:    :+:      :+:         \r\n        +:+           +:+           +:+              +:+ +:+:+ +:+                   +:+ +:+:+ +:+      +:+   +:+     :+:+:+  +:+        +:+   +:+    +:+             +:+          \r\n       +#+           +#+           +#++:++#         +#+  +:+  +#+                   +#+  +:+  +#+     +#++:++#++:    +#+ +:+ +#+       +#++:++#++:   :#:             +#++:++#      \r\n      +#+           +#+           +#+              +#+       +#+                   +#+       +#+     +#+     +#+    +#+  +#+#+#       +#+     +#+   +#+   +#+#      +#+            \r\n     #+#           #+#           #+#              #+#       #+#                   #+#       #+#     #+#     #+#    #+#   #+#+#       #+#     #+#   #+#    #+#      #+#             \r\n###########       ###           ##########       ###       ###                   ###       ###     ###     ###    ###    ####       ###     ###    ########       ##########       \r\n");
+            Console.WriteLine("\r\n::::::::::: ::::::::::: :::::::::: ::::    ::::                  ::::    ::::      :::     ::::    :::     :::      ::::::::  :::::::::: \r\n    :+:         :+:     :+:        +:+:+: :+:+:+                 +:+:+: :+:+:+   :+: :+:   :+:+:   :+:   :+: :+:   :+:    :+: :+:        \r\n    +:+         +:+     +:+        +:+ +:+:+ +:+                 +:+ +:+:+ +:+  +:+   +:+  :+:+:+  +:+  +:+   +:+  +:+        +:+        \r\n    +#+         +#+     +#++:++#   +#+  +:+  +#+                 +#+  +:+  +#+ +#++:++#++: +#+ +:+ +#+ +#++:++#++: :#:        +#++:++#   \r\n    +#+         +#+     +#+        +#+       +#+                 +#+       +#+ +#+     +#+ +#+  +#+#+# +#+     +#+ +#+   +#+# +#+        \r\n    #+#         #+#     #+#        #+#       #+#                 #+#       #+# #+#     #+# #+#   #+#+# #+#     #+# #+#    #+# #+#        \r\n###########     ###     ########## ###       ###                 ###       ### ###     ### ###    #### ###     ###  ########  ########## \r\n");
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("    [아이템 목록]");
@@ -173,15 +172,10 @@ namespace TextRPG
                         defenseBonusText = "방어력" + " - " + (-equipItemList[i].itDef);// itDef가 0보다 작으면 defenseBonusText에 할당
                     }
 
-                    //Console.WriteLine($" - {i + 1}. " +
-                    //    $"{equipItemList[i].equiped}{equipItemList[i].itName}    " +
-                    //    $"| {attackBonusText} {defenseBonusText}    " +
-                    //    $"| {equipItemList[i].itInfo}");
-
-                    int itNameKoreanCount = CountKoreanCharacters(equipItemList[i].itName);
-                    int attKoreanCount = CountKoreanCharacters(attackBonusText);
-                    int defKoreanCount = CountKoreanCharacters(defenseBonusText);
-                    int itInfoKoreanCount = CountKoreanCharacters(equipItemList[i].itInfo);
+                    int itNameKoreanCount = KoreanCount.CountKoreanCharacters(equipItemList[i].itName);
+                    int attKoreanCount = KoreanCount.CountKoreanCharacters(attackBonusText);
+                    int defKoreanCount = KoreanCount.CountKoreanCharacters(defenseBonusText);
+                    int itInfoKoreanCount = KoreanCount.CountKoreanCharacters(equipItemList[i].itInfo);
 
                     Console.Write($" - {i+1}. {equipItemList[i].equiped}");
 
@@ -286,37 +280,38 @@ namespace TextRPG
                 EquipManage();
             }
         }
-
-        static int CountKoreanCharacters(string input) //한글 카운트 하기
-        {
-            int koreanCount = 0;
-            foreach (char c in input)
-            {
-                // 한글 범위: 0xAC00 - 0xD7A3
-                if (c >= 0xAC00 && c <= 0xD7A3)
-                {
-                    koreanCount++;
-                }
-            }
-            return koreanCount;
-        }
     }
 
-    class EquipItem // 장비목록
+    class EquipItemsInformation // 장비목록
     {
         public string equiped { get; set; }
         public string itName { get; }
         public int itAtt { get; }
         public int itDef { get; }
         public string itInfo { get; }
+        public string sellPrice { get; }
+        public string buyPrice { get; }
+        public string soldOut { get; }
 
-        public EquipItem(string _Equiped, string _ItName, int _ItAtt, int _ItDef, string _ItInfo)
+        public EquipItemsInformation(string _Equiped, string _ItName, int _ItAtt, int _ItDef, string _ItInfo, string _SellPrice)
         {
             equiped = _Equiped;
             itName = _ItName;
             itAtt = _ItAtt;
             itDef = _ItDef;
             itInfo = _ItInfo;
+            sellPrice = _SellPrice;
+        }
+
+        public EquipItemsInformation(string _Equiped, string _ItName, int _ItAtt, int _ItDef, string _ItInfo, string _BuyPrice, string _SoldOut)
+        {
+            equiped = _Equiped;
+            itName = _ItName;
+            itAtt = _ItAtt;
+            itDef = _ItDef;
+            itInfo = _ItInfo;
+            buyPrice = _BuyPrice;
+            soldOut = _SoldOut;
         }
     }
 }
