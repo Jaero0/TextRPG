@@ -24,8 +24,8 @@ namespace TextRPG
             
             equipInven = new Inven();
 
-            equipItem1 = new EquipItem("", "무쇠 갑옷",0, 5,  "무쇠로 만들어져 튼튼한 갑옷입니다.");
-            equipItem2 = new EquipItem("", "낡은 검", 2, 0,  " 쉽게 볼 수 있는 낡은 검 입니다.");
+            equipItem1 = new EquipItem("", "무쇠 갑옷", 0, 5,  "무쇠로 만들어져 튼튼한 갑옷입니다.");
+            equipItem2 = new EquipItem("", "낡은 검", 2, 0,  "쉽게 볼 수 있는 낡은 검 입니다.");
             JaeRoItem1 = new EquipItem("", "오래된 일렉기타", 10, -10, "정신나간 공격력을 자랑하지만 그만큼 방어력도 낮아진다");
             JaeRoItem2 = new EquipItem("", "각잡힌 베레모", 5, 3, "그때 그 시절이 떠오릅니다");
             equipInven.ItemIn(equipItem1);

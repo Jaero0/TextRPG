@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\4. Programming\\3. C# 스크립트\\SpartaUnityCamp\\TextRPG\\TextRpg\\TextRPG.csproj": {}
+    "C:\\Users\\Jaero0\\Desktop\\TextRPG\\TextRPG\\TextRpg\\TextRPG.csproj": {}
   },
   "projects": {
-    "D:\\4. Programming\\3. C# 스크립트\\SpartaUnityCamp\\TextRPG\\TextRpg\\TextRPG.csproj": {
+    "C:\\Users\\Jaero0\\Desktop\\TextRPG\\TextRPG\\TextRpg\\TextRPG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\4. Programming\\3. C# 스크립트\\SpartaUnityCamp\\TextRPG\\TextRpg\\TextRPG.csproj",
+        "projectUniqueName": "C:\\Users\\Jaero0\\Desktop\\TextRPG\\TextRPG\\TextRpg\\TextRPG.csproj",
         "projectName": "TextRPG",
-        "projectPath": "D:\\4. Programming\\3. C# 스크립트\\SpartaUnityCamp\\TextRPG\\TextRpg\\TextRPG.csproj",
+        "projectPath": "C:\\Users\\Jaero0\\Desktop\\TextRPG\\TextRPG\\TextRpg\\TextRPG.csproj",
         "packagesPath": "C:\\Users\\Jaero0\\.nuget\\packages\\",
-        "outputPath": "D:\\4. Programming\\3. C# 스크립트\\SpartaUnityCamp\\TextRPG\\TextRpg\\obj\\",
+        "outputPath": "C:\\Users\\Jaero0\\Desktop\\TextRPG\\TextRPG\\TextRpg\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jaero0\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -66,9 +66,22 @@ namespace TextRPG
                         defenseBonusText = "방어력" + " - " + (-equipItemList[i].itDef);
                     }
 
+                    int itNameKoreanCount = CountKoreanCharacters(equipItemList[i].itName);
+                    int attKoreanCount = CountKoreanCharacters(attackBonusText);
+                    int defKoreanCount = CountKoreanCharacters(defenseBonusText);
+                    int itInfoKoreanCount = CountKoreanCharacters(equipItemList[i].itInfo);
 
-                    Console.WriteLine($" - {equipItemList[i].equiped}{equipItemList[i].itName}    | {attackBonusText} {defenseBonusText}    | {equipItemList[i].itInfo}");
+                    Console.Write($" - {equipItemList[i].equiped}");
 
+                    Console.Write(string.Format("{0}", equipItemList[i].itName).PadRight(20  - itNameKoreanCount) + "|");
+
+                    Console.Write(string.Format(" {0}", attackBonusText).PadRight(15 - attKoreanCount) + "|");
+
+                    Console.Write(string.Format(" {0}", defenseBonusText).PadRight(15 - defKoreanCount) + "|");
+
+                    Console.Write(string.Format(" {0}", equipItemList[i].itInfo).PadRight(60 - itInfoKoreanCount) + "|");
+
+                    Console.WriteLine();
                     Console.WriteLine();
                 }
             }
@@ -160,15 +173,31 @@ namespace TextRPG
                         defenseBonusText = "방어력" + " - " + (-equipItemList[i].itDef);// itDef가 0보다 작으면 defenseBonusText에 할당
                     }
 
-                    Console.WriteLine($" - {i + 1}. " +
-                        $"{equipItemList[i].equiped}{equipItemList[i].itName}    " +
-                        $"| {attackBonusText} {defenseBonusText}    " +
-                        $"| {equipItemList[i].itInfo}");
+                    //Console.WriteLine($" - {i + 1}. " +
+                    //    $"{equipItemList[i].equiped}{equipItemList[i].itName}    " +
+                    //    $"| {attackBonusText} {defenseBonusText}    " +
+                    //    $"| {equipItemList[i].itInfo}");
 
+                    int itNameKoreanCount = CountKoreanCharacters(equipItemList[i].itName);
+                    int attKoreanCount = CountKoreanCharacters(attackBonusText);
+                    int defKoreanCount = CountKoreanCharacters(defenseBonusText);
+                    int itInfoKoreanCount = CountKoreanCharacters(equipItemList[i].itInfo);
 
+                    Console.Write($" - {i+1}. {equipItemList[i].equiped}");
+
+                    Console.Write(string.Format("{0}", equipItemList[i].itName).PadRight(20 - itNameKoreanCount) + "|");
+
+                    Console.Write(string.Format(" {0}", attackBonusText).PadRight(15 - attKoreanCount) + "|");
+
+                    Console.Write(string.Format(" {0}", defenseBonusText).PadRight(15 - defKoreanCount) + "|");
+
+                    Console.Write(string.Format(" {0}", equipItemList[i].itInfo).PadRight(60 - itInfoKoreanCount) + "|");
+
+                    Console.WriteLine();
                     Console.WriteLine();
                 }
             }
+            Console.WriteLine();
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write(" ");
@@ -256,6 +285,20 @@ namespace TextRPG
                 Console.ReadKey();
                 EquipManage();
             }
+        }
+
+        static int CountKoreanCharacters(string input) //한글 카운트 하기
+        {
+            int koreanCount = 0;
+            foreach (char c in input)
+            {
+                // 한글 범위: 0xAC00 - 0xD7A3
+                if (c >= 0xAC00 && c <= 0xD7A3)
+                {
+                    koreanCount++;
+                }
+            }
+            return koreanCount;
         }
     }
 

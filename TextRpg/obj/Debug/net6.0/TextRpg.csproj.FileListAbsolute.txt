@@ -28,3 +28,18 @@ D:\4. Programming\3. C# 스크립트\SpartaUnityCamp\TextRPG\TextRpg\obj\Debug\n
 D:\4. Programming\3. C# 스크립트\SpartaUnityCamp\TextRPG\TextRpg\obj\Debug\net6.0\TextRpg.pdb
 D:\4. Programming\3. C# 스크립트\SpartaUnityCamp\TextRPG\TextRpg\obj\Debug\net6.0\TextRpg.genruntimeconfig.cache
 D:\4. Programming\3. C# 스크립트\SpartaUnityCamp\TextRPG\TextRpg\obj\Debug\net6.0\ref\TextRpg.dll
+C:\Users\Jaero0\Desktop\TextRPG\TextRPG\TextRpg\bin\Debug\net6.0\TextRPG.exe
+C:\Users\Jaero0\Desktop\TextRPG\TextRPG\TextRpg\bin\Debug\net6.0\TextRPG.deps.json
+C:\Users\Jaero0\Desktop\TextRPG\TextRPG\TextRpg\bin\Debug\net6.0\TextRPG.runtimeconfig.json
+C:\Users\Jaero0\Desktop\TextRPG\TextRPG\TextRpg\bin\Debug\net6.0\TextRPG.dll
+C:\Users\Jaero0\Desktop\TextRPG\TextRPG\TextRpg\bin\Debug\net6.0\TextRPG.pdb
+C:\Users\Jaero0\Desktop\TextRPG\TextRPG\TextRpg\obj\Debug\net6.0\TextRPG.csproj.AssemblyReference.cache
+C:\Users\Jaero0\Desktop\TextRPG\TextRPG\TextRpg\obj\Debug\net6.0\TextRPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jaero0\Desktop\TextRPG\TextRPG\TextRpg\obj\Debug\net6.0\TextRPG.AssemblyInfoInputs.cache
+C:\Users\Jaero0\Desktop\TextRPG\TextRPG\TextRpg\obj\Debug\net6.0\TextRPG.AssemblyInfo.cs
+C:\Users\Jaero0\Desktop\TextRPG\TextRPG\TextRpg\obj\Debug\net6.0\TextRPG.csproj.CoreCompileInputs.cache
+C:\Users\Jaero0\Desktop\TextRPG\TextRPG\TextRpg\obj\Debug\net6.0\TextRPG.dll
+C:\Users\Jaero0\Desktop\TextRPG\TextRPG\TextRpg\obj\Debug\net6.0\refint\TextRPG.dll
+C:\Users\Jaero0\Desktop\TextRPG\TextRPG\TextRpg\obj\Debug\net6.0\TextRPG.pdb
+C:\Users\Jaero0\Desktop\TextRPG\TextRPG\TextRpg\obj\Debug\net6.0\TextRPG.genruntimeconfig.cache
+C:\Users\Jaero0\Desktop\TextRPG\TextRPG\TextRpg\obj\Debug\net6.0\ref\TextRPG.dll
