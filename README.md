@@ -36,4 +36,9 @@
 string으로 입력받아서 변환하는 장치를 만들어야 하는데, 일단 지금은 문제가 없으니, 이렇게 남겨두고,
 후에 필요해지면 그때가서 바꾸겠다.
 
-<img width="{80%}" src="{![consoleRPG3](https://github.com/Jaero0/TextRPG/assets/124887853/68b85255-d701-4fc3-9eab-4d8715ee7e6c)}"/>
+### 아래는 플레이 영상
+
+<p align="center">
+  <img src="https://github.com/Jaero0/TextRPG/assets/124887853/68b85255-d701-4fc3-9eab-4d8715ee7e6c">
+</p>
+
